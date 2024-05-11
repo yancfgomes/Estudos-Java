@@ -1,18 +1,66 @@
-## Getting Started
+## Sistema de Gerenciamento de Biblioteca
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+O projeto está organizado do modo abaixo:
+![Arquitetura](C:\Users\Trocados\codigoJava\AtividadeTela\src\assets\arquitetura.jpeg)
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+### Lógica de Negócios (logic):
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+#### Livro.java:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- A classe `Livro` define a estrutura de um livro, incluindo propriedades como título, autor e ano de publicação.
+- Um construtor é fornecido para inicializar um objeto `Livro` com os valores fornecidos.
+- Métodos de acesso (`get`) estão disponíveis para recuperar detalhes específicos do livro, como título, autor e ano de publicação.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+#### Biblioteca.java:
 
-## Dependency Management
+- A classe `Biblioteca` representa a biblioteca e mantém uma lista de livros.
+- Um construtor inicializa a lista de livros.
+- O método `adicionarLivro` permite adicionar um novo livro à biblioteca.
+- O método `getLivros` retorna a lista de livros na biblioteca.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Interfaces do Usuário (ui):
+
+#### InterfaceBibliotecario.java:
+
+- Esta classe representa a interface do usuário para o bibliotecário.
+- Ela estende a classe `JFrame` para criar uma janela de interface gráfica.
+- Campos de texto permitem inserir informações sobre um novo livro, como título, autor e ano de publicação.
+- Um botão "Adicionar Livro" permite ao bibliotecário adicionar um novo livro à biblioteca quando os detalhes são preenchidos.
+
+#### InterfaceMembroBiblioteca.java:
+
+- Esta classe representa a interface do usuário para o membro da biblioteca.
+- Também estende a classe `JFrame`.
+- A interface inclui um botão "Mostrar Livros" que, quando clicado, exibe uma janela com a lista de todos os livros disponíveis na biblioteca.
+
+#### InterfaceAdministrador.java:
+
+- Esta classe representa a interface do usuário para o administrador.
+- Também estende a classe `JFrame`.
+- A interface é semelhante à do membro da biblioteca, com um botão "Mostrar Livros" para exibir a lista de livros disponíveis.
+
+### Classe Principal (main):
+
+#### Main.java:
+
+- Esta classe é a classe principal que inicia o programa.
+- No método `main`, uma instância da classe `Biblioteca` é criada.
+- Em seguida, instâncias das interfaces do usuário são criadas para cada tipo de usuário (bibliotecário, membro da biblioteca e administrador).
+
+### Funcionamento Geral:
+
+- Ao executar o programa, a classe `Main` é iniciada.
+- Ela cria uma instância da `Biblioteca` e, em seguida, instâncias das interfaces do usuário.
+- Cada interface oferece funcionalidades específicas de acordo com o tipo de usuário, como adicionar livros para o bibliotecário e mostrar livros para membros da biblioteca e administradores.
+- As interfaces são implementadas usando a biblioteca Swing do Java para criar elementos de interface gráfica, como janelas, botões e campos de texto.
+
+### Propriedades para Criar uma Interface Gráfica:
+
+- **JFrame:** O contêiner principal para uma janela de interface gráfica.
+- **JPanel:** Contêiner que pode conter outros componentes de interface gráfica.
+- **JLabel:** Usado para exibir texto ou imagens na interface do usuário.
+- **JTextField:** Campo de texto onde os usuários podem inserir texto.
+- **JButton:** Botão que pode ser clicado pelo usuário para realizar uma ação.
+- **ActionListener:** Interface usada para lidar com eventos de ação, como clicar em um botão.
+- **Layout Manager:** Usado para controlar a disposição e o dimensionamento dos componentes dentro de um contêiner.
