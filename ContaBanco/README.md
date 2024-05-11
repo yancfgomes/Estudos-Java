@@ -1,18 +1,26 @@
-## Getting Started
+# Desafio: Criando a Classe ContaTerminal em Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Visão Geral
+Neste desafio, o objetivo é criar uma classe Java chamada `ContaTerminal` para gerenciar informações de uma conta bancária. A classe permitirá que o usuário insira os dados da conta via terminal e, em seguida, exibirá uma mensagem com as informações inseridas.
 
-## Folder Structure
+## Funcionalidades
+- A classe `ContaTerminal` será responsável por coletar os seguintes dados do usuário via terminal:
+  - Número da agência (tipo String)
+  - Número da conta (tipo int)
+  - Nome do cliente (tipo String)
+  - Saldo da conta (tipo double)
+- Após a inserção dos dados, a classe exibirá uma mensagem personalizada com as informações fornecidas pelo usuário.
 
-The workspace contains two folders by default, where:
+## Instruções
+Para completar o desafio, siga estas etapas:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+1. Crie uma classe Java chamada `ContaTerminal`.
+2. Utilize a classe `Scanner` para permitir a entrada de dados do usuário via terminal.
+3. Solicite ao usuário que insira o número da agência, número da conta, nome do cliente e saldo da conta.
+4. Utilize as regras de declaração de variáveis em Java para definir os tipos de dados corretos para cada informação.
+5. Utilize concatenação de strings para formar a mensagem final a ser exibida.
+6. Após a inserção dos dados, exiba a mensagem personalizada conforme especificado.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Exemplo de Uso
+Aqui está um exemplo de como a classe `ContaTerminal` pode ser utilizada:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
