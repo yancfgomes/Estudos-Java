@@ -18,7 +18,7 @@ private Biblioteca biblioteca;
 
         setTitle("Interface do Bibliotecário");
         setSize(400, 200);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(null);
 
         JLabel lblTitulo = new JLabel("Título:");
