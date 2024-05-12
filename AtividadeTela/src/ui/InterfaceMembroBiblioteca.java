@@ -17,7 +17,7 @@ public class InterfaceMembroBiblioteca extends JFrame implements ActionListener 
 
         setTitle("Interface do Membro da Biblioteca");
         setSize(400, 200);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(null);
 
         btnMostrar = new JButton("Mostrar Livros");
