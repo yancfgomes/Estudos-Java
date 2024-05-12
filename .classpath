@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Estudos-Java/AtividadeTela/src"/>
+	<classpathentry kind="src" path="Estudos-Java/aula4/src"/>
+	<classpathentry kind="src" path="Estudos-Java/AulaTela/src"/>
+	<classpathentry kind="src" path="Estudos-Java/ContaBanco/src"/>
+	<classpathentry kind="src" path="Estudos-Java/sistema-smart-tv/src"/>
+	<classpathentry kind="output" path="Estudos-Java/AtividadeTela/bin"/>
+</classpath>
