@@ -38,7 +38,7 @@
 
 ### Classe Principal (main):
 
-#### Main.java:
+#### Menu.java:
 
 - Esta classe é a classe principal que inicia o programa.
 - No método `main`, uma instância da classe `Biblioteca` é criada.
@@ -46,7 +46,7 @@
 
 ### Funcionamento Geral:
 
-- Ao executar o programa, a classe `Main` é iniciada.
+- Ao executar o programa, a classe `Menu` é iniciada.
 - Ela cria uma instância da `Biblioteca` e, em seguida, instâncias das interfaces do usuário.
 - Cada interface oferece funcionalidades específicas de acordo com o tipo de usuário, como adicionar livros para o bibliotecário e mostrar livros para membros da biblioteca e administradores.
 - As interfaces são implementadas usando a biblioteca Swing do Java para criar elementos de interface gráfica, como janelas, botões e campos de texto.
