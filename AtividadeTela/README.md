@@ -1,9 +1,5 @@
 ## Sistema de Gerenciamento de Biblioteca
 
-O projeto está organizado do modo abaixo:
-![Arquitetura](C:\Users\Trocados\codigoJava\AtividadeTela\src\assets\arquitetura.jpeg)
-
-
 ### Lógica de Negócios (logic):
 
 #### Livro.java:
