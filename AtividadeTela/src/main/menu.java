@@ -12,7 +12,7 @@ import ui.InterfaceMembroBiblioteca;
 import ui.InterfaceAdministrador;
 
 
-public class Menu {
+public class menu {
 
 	public static void main(String[] args) {
 		Biblioteca biblioteca = new Biblioteca();
