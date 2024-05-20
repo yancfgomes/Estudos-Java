@@ -20,7 +20,7 @@ public class UpdateMenu extends JPanel {
 
         // Carrega a imagem de fundo
         try {
-            backgroundImage = ImageIO.read(new File("background.jpg"));
+            backgroundImage = ImageIO.read(new File("estudos-java/AtividadeTela/src/main/background.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
