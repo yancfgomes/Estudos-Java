@@ -1,20 +1,15 @@
 package main;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
 import ui.InterfaceAdministrador;
 import ui.InterfaceBibliotecario;
 import ui.InterfaceMembroBiblioteca;
-import logic.AcervoDeLivros;
 import logic.Biblioteca;
 
 public class UpdateMenu extends JPanel {
@@ -23,9 +18,9 @@ public class UpdateMenu extends JPanel {
     public UpdateMenu() {
         Biblioteca biblioteca = new Biblioteca();
 
-        // Carrega a imagem de fundo
+        // Carrega a imagem de fundo OBS: AO FAZER UM PULL, TALVEZ A IMAGEM NÃO SEJA CARREGADA. TENTE ADAPTAR O CAMINHO DA IMAGEM CONFORME A SUA REALIDADE.
         try {
-            backgroundImage = ImageIO.read(new File("estudos-java/AtividadeTela/src/main/background.jpg"));
+            backgroundImage = ImageIO.read(new File("C:\\Users\\Trocados\\codigoJava\\AtividadeTela\\src\\main\\background.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,29 +31,12 @@ public class UpdateMenu extends JPanel {
         // Criação dos menus
         JMenu fileMenu = new JMenu("Menu");
         JMenu aboutMenu = new JMenu("Sobre");
-        JMenu collectioMenu = new JMenu("Acervo de livros");
 
         // Criação dos itens de menu para o menu
         JMenuItem bibliotecario = new JMenuItem("Bibliotecário");
         JMenuItem membro = new JMenuItem("Membro");
         JMenuItem administrador = new JMenuItem("Administrador");
         JMenuItem sair = new JMenuItem("Sair");
-        JMenuItem acervoDeLivros = new JMenuItem("Acervo de Livros");
-
-        // Criar o item de menu "Sobre"
-        JMenuItem sobre = new JMenuItem("Sobre");
-        aboutMenu.add(sobre);
-
-        // Adicionar um ActionListener para o item de menu "Sobre"
-        sobre.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null,
-                        "Sistema Bibliotecário\n Atividade de seminario da matéria de POO do 3º periodo do curso de ADS \n Sistema de gerenciamento de biblioteca desenvolvido em Java, com uma interface gráfica de usuário (GUI).\n \n\nProgramadores:\n- Adila \n- Yan \n- Natiele ",
-                        "Sobre",
-                        JOptionPane.INFORMATION_MESSAGE);
-            }
-        });
 
         // Adiciona um ouvinte de ação ao item "Sair"
         sair.addActionListener(new ActionListener() {
@@ -71,8 +49,7 @@ public class UpdateMenu extends JPanel {
                 }
             }
         });
-
-        // Ações ao clicar no menuitem bibliotecario
+        // ações ao clicar no menuitem bibliotecario
         bibliotecario.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -80,8 +57,7 @@ public class UpdateMenu extends JPanel {
                 interfaceBibliotecario.setVisible(true);
             }
         });
-
-        // Ações ao clicar no menu item membro
+        // ações ao clicar no menuitem membro
         membro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -89,8 +65,7 @@ public class UpdateMenu extends JPanel {
                 interfaceMembroBiblioteca.setVisible(true);
             }
         });
-
-        // Ações ao clicar no menu item Administrador
+        // ações ao clicar no menuitem Administrador
         administrador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -99,32 +74,9 @@ public class UpdateMenu extends JPanel {
             }
         });
 
-        // Ações ao clicar no menuitem Acervo de Livros
-        acervoDeLivros.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Criar lista de livros de exemplo
-                List<String[]> livros = new ArrayList<>();
-                livros.add(new String[]{"1", "JAVA como programar ", "Paul Deitel", "2016", "Disponível"});
-                livros.add(new String[]{"2", "Engenharia de Software ", "Roger S. Pressman", "2021", "Emprestado"});
-                livros.add(new String[]{"3", "Sistemas de Banco de Dados", "Elmasri", "2019", "Disponível"});
-                livros.add(new String[]{"4", "Sistemas Operacionais Modernos", "Andrew S Tanenbaum", "2024", "Disponível"});
-                livros.add(new String[]{"5", "Entendendo Algoritmos: guia Ilustrado", "Aditya Y.Bhargava", "2017", "Disponível"});
-                livros.add(new String[]{"6", "Arquitetura Limpa", "Robert C. Martin", "2019", "Emprestado"});
-                livros.add(new String[]{"7", "Introdução à Linguagem SQL ", "Thomas Nield ", "2016", "Emprestado"});
-                livros.add(new String[]{"8", "Modelagem de Dados", "José Osvaldo de Sordi", "2019", "Disponível"});
-                livros.add(new String[]{"9", "Governaça de Dados ", "Carlos Bardieri", "2019", "Disponível"});
-                // Adicionar mais livros conforme necessário
-
-                AcervoDeLivros acervoDeLivrosFrame = new AcervoDeLivros(livros);
-                acervoDeLivrosFrame.setVisible(true);
-            }
-        });
-
         // Adiciona os menus à barra de menu
         barramenu.add(fileMenu);
         barramenu.add(aboutMenu);
-        barramenu.add(collectioMenu);
 
         // Adiciona os itens de menu ao menu
         fileMenu.add(bibliotecario);
@@ -132,7 +84,6 @@ public class UpdateMenu extends JPanel {
         fileMenu.add(administrador);
         fileMenu.addSeparator(); // Adiciona uma linha separadora
         fileMenu.add(sair);
-        collectioMenu.add(acervoDeLivros); // Adicionar o item de menu Acervo de Livros ao collectioMenu
 
         // Define a barra de menu para este painel
         setLayout(new BorderLayout());
