@@ -18,7 +18,7 @@ public class UpdateMenu extends JPanel {
     public UpdateMenu() {
         Biblioteca biblioteca = new Biblioteca();
 
-        // Carrega a imagem de fundo
+        // Carrega a imagem de fundo OBS: AO FAZER UM PULL, TALVEZ A IMAGEM NÃO SEJA CARREGADA. TENTE ADAPTAR O CAMINHO DA IMAGEM CONFORME A SUA REALIDADE.
         try {
             backgroundImage = ImageIO.read(new File("C:\\Users\\Trocados\\codigoJava\\AtividadeTela\\src\\main\\background.jpg"));
         } catch (IOException e) {
