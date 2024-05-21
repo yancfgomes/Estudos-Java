@@ -17,10 +17,10 @@ import ui.InterfaceMembroBiblioteca;
 import logic.AcervoDeLivros;
 import logic.Biblioteca;
 
-public class UpdateMenu extends JPanel {
+public class menu extends JPanel {
     private BufferedImage backgroundImage;
 
-    public UpdateMenu() {
+    public menu() {
         Biblioteca biblioteca = new Biblioteca();
 
         // Carrega a imagem de fundo
@@ -149,7 +149,7 @@ public class UpdateMenu extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Sistema Bibliotecário");
-        UpdateMenu panel = new UpdateMenu();
+        menu panel = new menu();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1500, 800);
         frame.add(panel);
