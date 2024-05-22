@@ -43,9 +43,8 @@ public class menu extends JPanel {
         JMenuItem administrador = new JMenuItem("Administrador");
         JMenuItem sair = new JMenuItem("Sair");
         JMenuItem acervoDeLivros = new JMenuItem("Acervo de Livros");
-
-        // Criar o item de menu "Sobre"
         JMenuItem sobre = new JMenuItem("Sobre");
+        
         aboutMenu.add(sobre);
 
         // Adicionar um ActionListener para o item de menu "Sobre"
