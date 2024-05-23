@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
+import ui.CadastroUsuario;
 import ui.InterfaceAdministrador;
 import ui.InterfaceBibliotecario;
 import ui.InterfaceMembroBiblioteca;
@@ -20,7 +22,7 @@ public class menu extends JPanel {
     private BufferedImage backgroundImage;
 
     public menu() {
-        Biblioteca biblioteca = new Biblioteca();
+        Biblioteca biblioteca = new Biblioteca(); // Cria uma nova instância de Biblioteca
 
         // Carrega a imagem de fundo
         try {
@@ -28,6 +30,8 @@ public class menu extends JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        
 
         // Criação da barra de menu
         JMenuBar barramenu = new JMenuBar();
@@ -44,7 +48,7 @@ public class menu extends JPanel {
         JMenuItem sair = new JMenuItem("Sair");
         JMenuItem acervoDeLivros = new JMenuItem("Acervo de Livros");
         JMenuItem sobre = new JMenuItem("Sobre");
-        
+           
         aboutMenu.add(sobre);
 
         // Adicionar um ActionListener para o item de menu "Sobre"
@@ -158,11 +162,16 @@ public class menu extends JPanel {
     }
 
     public static void main(String[] args) {
+        CadastroUsuario cadastroUsuario = new CadastroUsuario();
+        
         JFrame frame = new JFrame("Sistema Bibliotecário");
         menu panel = new menu();
+        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1500, 800);
         frame.add(panel);
         frame.setVisible(true);
+        cadastroUsuario.setVisible(true);
+        cadastroUsuario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
